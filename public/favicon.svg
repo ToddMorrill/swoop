@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Swoop">
+  <rect width="32" height="32" rx="7" fill="#0b3a20"/>
+  <!-- A card peeking out from behind the one on top: a pile, at 16px. -->
+  <rect x="5.5" y="9" width="13" height="17.5" rx="2.4" fill="#cfd8d2"
+        transform="rotate(-16 12 17.75)"/>
+  <rect x="12" y="7" width="14.5" height="19" rx="2.6" fill="#fbfbf9"
+        stroke="#0b3a20" stroke-width="1.1"/>
+  <path d="M19.25 21.9 15.6 18.1a2.55 2.55 0 0 1-.2-3.5 2.4 2.4 0 0 1 3.85.42
+           2.4 2.4 0 0 1 3.85-.42 2.55 2.55 0 0 1-.2 3.5z" fill="#b91c1c"/>
+</svg>

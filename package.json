@@ -1,0 +1,36 @@
+{
+  "name": "swoop",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "sim": "tsx src/sim/run.ts",
+    "check:core": "grep -rnE \"from ['\\\"]react|\\\\bdocument\\\\.|\\\\bwindow\\\\.|Math\\\\.random\\\\(\" src/core src/bots | grep -vE ':[0-9]+: *(\\\\*|//)' && (echo 'core purity violation' && exit 1) || echo 'core is pure'",
+    "check:pages": "node scripts/check-pages.mjs",
+    "preview:pages": "BASE_PATH=/swoop/ npm run build && BASE_PATH=/swoop/ vite preview --port 4173"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.6",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "jsdom": "^29.1.1",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}
